@@ -1,3 +1,6 @@
+//The new CSS reset - version 1.11.3 (last updated 25.08.2024)
+//GitHub page: https://github.com/elad2412/the-new-css-reset
+
 *:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
   all: unset;
   display: revert;
@@ -62,7 +65,7 @@ meter {
   display: none;
 }
 
-:where([contenteditable]:not([contenteditable=false])) {
+:where([contenteditable]:not([contenteditable="false"])) {
   -moz-user-modify: read-write;
   -webkit-user-modify: read-write;
   overflow-wrap: break-word;
@@ -70,7 +73,7 @@ meter {
   -webkit-user-select: auto;
 }
 
-:where([draggable=true]) {
+:where([draggable="true"]) {
   -webkit-user-drag: element;
 }
 
@@ -82,14 +85,3 @@ meter {
 ::-webkit-details-marker {
   display: none;
 }
-
-@font-face {
-  font-family: "Young Serif";
-  src: url("/src/assets/fonts/young-serif/YoungSerif-Regular.ttf");
-}
-@font-face {
-  font-family: "Outfit";
-  src: url("/src/assets/fonts/outfit/Outfit-VariableFont_wght.ttf");
-}
-
-/*# sourceMappingURL=index.css.map */
