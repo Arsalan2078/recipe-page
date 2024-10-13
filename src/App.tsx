@@ -3,6 +3,7 @@ import RecipeIngredients from "./components/RecipeIngredients";
 import RecipeInstructions from "./components/RecipeInstructions";
 import RecipeIntro from "./components/RecipeIntro"
 import RecipeNutrition from "./components/RecipeNutrition";
+import Separator from "./components/Separator";
 import { RecipeProps } from "./libs/types"
 
 function App () {
@@ -51,7 +52,7 @@ function App () {
         details: "As the omelette continues to cook, carefully lift one edge and fold it over the fillings. Let it cook for another minute, then slide it onto a plate."
       },
       {
-        step: "Enjoy:",
+        step: "Enjoy",
         details: "Serve hot, with additional salt and pepper if needed."
       }
     ],
@@ -80,26 +81,33 @@ function App () {
           alt={ recipeImage.alt }
         />
 
-        <RecipeIntro
-          title={ recipeIntro.title }
-          paragraphs={ recipeIntro.paragraphs }
-          recipePreparation={ recipePreparation }
-        />
+        <div className="recipe-content">
+          <RecipeIntro
+            title={ recipeIntro.title }
+            paragraphs={ recipeIntro.paragraphs }
+            recipePreparation={ recipePreparation }
+          />
 
-        <RecipeIngredients
-          recipeIngredients={ recipeIngredients}
-        />
+          <RecipeIngredients
+            recipeIngredients={ recipeIngredients}
+          />
 
-        <RecipeInstructions
-          recipeInstructions={ recipeInstructions }
-        />
+          <Separator />
 
-        <RecipeNutrition
-          calories={ recipeNutrition.calories }
-          carbs={ recipeNutrition.carbs }
-          protein={ recipeNutrition.protein }
-          fat={ recipeNutrition.fat }
-        />
+          <RecipeInstructions
+            recipeInstructions={ recipeInstructions }
+          />
+
+          <Separator />
+
+          <RecipeNutrition
+            calories={ recipeNutrition.calories }
+            carbs={ recipeNutrition.carbs }
+            protein={ recipeNutrition.protein }
+            fat={ recipeNutrition.fat }
+          />          
+        </div>
+
       </div>
     </main>
   )

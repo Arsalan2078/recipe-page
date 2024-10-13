@@ -1,0 +1,51 @@
+@use 'colors';
+
+#root {
+  background-color: colors.$stone-100;
+}
+
+.recipe {
+  background-color: colors.$white;
+
+  h1 {
+    color: colors.$stone-900;
+  }
+
+  h2 {
+    color: colors.$brown-800;
+  }
+
+  p,
+  li,
+  th,
+  td {
+    color: colors.$stone-600;
+  }
+
+  ul li::marker,
+  ol li::marker {
+    color: colors.$brown-800;
+  }
+
+  .separator {
+    border-top: 0.0125rem solid colors.$stone-150;
+  }
+
+  .recipe-preparation {
+    background-color: colors.$rose-50;
+
+    h3 {
+      color: colors.$rose-800;
+    }
+  }
+
+  tbody {
+    tr {
+      border-bottom: 0.0125rem solid colors.$stone-150;
+    }
+  
+    tr:nth-of-type(4) {
+      border-bottom: none;
+    }
+  }
+}

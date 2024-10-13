@@ -1,0 +1,18 @@
+@use 'typography';
+
+img {
+  width: 100%;
+  display: block;
+}
+
+b {
+  font-weight: bold;
+}
+
+ul li {
+  list-style-type: disc;
+}
+
+ol li {
+  list-style-type: decimal;
+}

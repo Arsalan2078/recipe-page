@@ -1,6 +1,7 @@
-// styles reset
 @forward 'reset';
 
-// variables
 @forward 'colors';
+@forward 'theme';
 @forward 'typography';
+
+@forward 'base';

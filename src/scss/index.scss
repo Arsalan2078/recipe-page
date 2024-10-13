@@ -1,1 +1,129 @@
 @use 'hub';
+
+html {
+  height: 100%;
+}
+
+body {
+  height: inherit;
+}
+
+body,
+p,
+th,
+td,
+li,
+li::marker {
+  font-family: "Outfit";
+  font-size: hub.$font-size-rg;
+  line-height: hub.$font-size-rg * 1.5;
+}
+
+ul li::marker {
+  font-size: 0.75rem;
+}
+
+ol li::marker {
+  font-weight: hub.$font-weight-700;
+}
+
+h1,
+h2 {
+  font-family: 'Young Serif';
+  font-weight: hub.$font-weight-400;
+}
+
+h1 {
+  font-size: hub.$font-size-xxl;
+  line-height: hub.$font-size-xxl * 1;
+}
+
+h2 {
+  font-size: hub.$font-size-xl;
+  line-height: hub.$font-size-xl * 1
+}
+
+h3 {
+  font-size: hub.$font-size-lg;
+  font-weight: hub.$font-weight-600;
+  line-height: hub.$font-size-lg * 1
+}
+
+ul li,
+ol li {
+  margin-left: 1.5rem;
+  padding-left: 1rem;
+}
+
+ul li::marker,
+ol li::marker {
+  font-weight: hub.$font-weight-700;
+}
+
+ul, ol {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.root {
+  height: inherit;
+}
+
+.main {
+  height: inherit;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.recipe {
+  flex-basis: 45rem;
+  display: grid;
+  gap: 2rem;
+}
+
+.recipe-content {
+  padding: 2rem;
+  padding-top: 0;
+  display: grid;
+  gap: 2rem;
+}
+
+.recipe-intro {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.recipe-preparation {
+  border-radius: 1rem;
+  padding: 1.5rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.recipe-ingredients {
+  display: grid;
+  gap: 1rem;
+}
+
+.recipe-instructions {
+  display: grid;
+  gap: 1rem;
+}
+
+.recipe-nutrition {
+  display: grid;
+  gap: 1rem;
+
+  .nutrition-value {
+    color: hub.$brown-800;
+    font-weight: hub.$font-weight-700
+  }
+
+  tbody {
+    th, td {
+      padding: 0.8rem 2rem;
+    }
+  }
+}

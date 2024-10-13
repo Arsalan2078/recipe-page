@@ -13,7 +13,7 @@ function RecipeInstructions ({ recipeInstructions }: RecipeInstructionsProps) {
 
       {
         recipeInstructions && 
-          <ul>
+          <ol>
             {
               recipeInstructions.map(({ step, details }, index) =>
                 <li key={ index }>
@@ -21,7 +21,7 @@ function RecipeInstructions ({ recipeInstructions }: RecipeInstructionsProps) {
                 </li>
               )
             }
-          </ul>
+          </ol>
       }
     </section>
   )

@@ -83,6 +83,45 @@ meter {
   display: none;
 }
 
+#root {
+  background-color: #f3e5d7;
+}
+
+.recipe {
+  background-color: #ffffff;
+}
+.recipe h1 {
+  color: #302d2b;
+}
+.recipe h2 {
+  color: #854532;
+}
+.recipe p,
+.recipe li,
+.recipe th,
+.recipe td {
+  color: #5f564e;
+}
+.recipe ul li::marker,
+.recipe ol li::marker {
+  color: #854532;
+}
+.recipe .separator {
+  border-top: 0.0125rem solid #e3ddd7;
+}
+.recipe .recipe-preparation {
+  background-color: #fff4f9;
+}
+.recipe .recipe-preparation h3 {
+  color: #7b274e;
+}
+.recipe tbody tr {
+  border-bottom: 0.0125rem solid #e3ddd7;
+}
+.recipe tbody tr:nth-of-type(4) {
+  border-bottom: none;
+}
+
 @font-face {
   font-family: "Young Serif";
   src: url("/src/assets/fonts/young-serif/YoungSerif-Regular.ttf");
@@ -90,6 +129,145 @@ meter {
 @font-face {
   font-family: "Outfit";
   src: url("/src/assets/fonts/outfit/Outfit-VariableFont_wght.ttf");
+}
+img {
+  width: 100%;
+  display: block;
+}
+
+b {
+  font-weight: bold;
+}
+
+ul li {
+  list-style-type: disc;
+}
+
+ol li {
+  list-style-type: decimal;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: inherit;
+}
+
+body,
+p,
+th,
+td,
+li,
+li::marker {
+  font-family: "Outfit";
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+ul li::marker {
+  font-size: 0.75rem;
+}
+
+ol li::marker {
+  font-weight: 700;
+}
+
+h1,
+h2 {
+  font-family: "Young Serif";
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 2.3rem;
+  line-height: 2.3rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+  line-height: 1.75rem;
+}
+
+h3 {
+  font-size: 1.35rem;
+  font-weight: 600;
+  line-height: 1.35rem;
+}
+
+ul li,
+ol li {
+  margin-left: 1.5rem;
+  padding-left: 1rem;
+}
+
+ul li::marker,
+ol li::marker {
+  font-weight: 700;
+}
+
+ul, ol {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.root {
+  height: inherit;
+}
+
+.main {
+  height: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.recipe {
+  flex-basis: 45rem;
+  display: grid;
+  gap: 2rem;
+}
+
+.recipe-content {
+  padding: 2rem;
+  padding-top: 0;
+  display: grid;
+  gap: 2rem;
+}
+
+.recipe-intro {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.recipe-preparation {
+  border-radius: 1rem;
+  padding: 1.5rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.recipe-ingredients {
+  display: grid;
+  gap: 1rem;
+}
+
+.recipe-instructions {
+  display: grid;
+  gap: 1rem;
+}
+
+.recipe-nutrition {
+  display: grid;
+  gap: 1rem;
+}
+.recipe-nutrition .nutrition-value {
+  color: #854532;
+  font-weight: 700;
+}
+.recipe-nutrition tbody th, .recipe-nutrition tbody td {
+  padding: 0.8rem 2rem;
 }
 
 /*# sourceMappingURL=index.css.map */

@@ -17,7 +17,7 @@ function RecipeNutrition ({ calories, carbs, protein, fat }: RecipeProps['recipe
             <th>
               Calories
             </th>
-            <td>
+            <td className="nutrition-value">
               { calories }
             </td>
           </tr>
@@ -25,7 +25,7 @@ function RecipeNutrition ({ calories, carbs, protein, fat }: RecipeProps['recipe
             <th>
               Carbs
             </th>
-            <td>
+            <td className="nutrition-value">
               { carbs }
             </td>
           </tr>
@@ -33,7 +33,7 @@ function RecipeNutrition ({ calories, carbs, protein, fat }: RecipeProps['recipe
             <th>
               Protein
             </th>
-            <td>
+            <td className="nutrition-value">
               { protein }
             </td>
           </tr>
@@ -41,7 +41,7 @@ function RecipeNutrition ({ calories, carbs, protein, fat }: RecipeProps['recipe
             <th>
               Fat
             </th>
-            <td>
+            <td className="nutrition-value">
               { fat }
             </td>
           </tr>
