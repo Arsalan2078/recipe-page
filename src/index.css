@@ -98,6 +98,7 @@ meter {
 }
 .recipe p,
 .recipe li,
+.recipe caption,
 .recipe th,
 .recipe td {
   color: #5f564e;
@@ -147,33 +148,66 @@ ol li {
   list-style-type: decimal;
 }
 
-html {
-  height: 100%;
+ul, ol {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
-body {
-  height: inherit;
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-body,
-p,
-th,
-td,
-li,
-li::marker {
-  font-family: "Outfit";
-  font-size: 1rem;
-  line-height: 1.5rem;
+.recipe {
+  flex-basis: 60rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
-
-ul li::marker {
-  font-size: 0.75rem;
+.recipe .recipe-content {
+  padding: 2rem;
+  padding-top: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
-
-ol li::marker {
+.recipe .recipe-content section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.recipe .recipe-content .recipe-intro .recipe-preparation {
+  border-radius: 1rem;
+  padding: 1.5rem;
+  display: grid;
+  gap: 1rem;
+}
+.recipe .recipe-content .recipe-nutrition table {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.recipe .recipe-content .recipe-nutrition tbody tr {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.recipe .recipe-content .recipe-nutrition tbody tr th, .recipe .recipe-content .recipe-nutrition tbody tr td {
+  padding: 0.7rem 0 0.7rem 0;
+}
+.recipe .recipe-content .recipe-nutrition tbody tr th {
+  padding-left: 2rem;
+}
+.recipe .recipe-content .recipe-nutrition tbody tr td {
+  padding-left: 0.5rem;
+}
+.recipe .recipe-content .recipe-nutrition .nutrition-value {
+  color: #854532;
   font-weight: 700;
 }
 
+/* Fonts and identations */
 h1,
 h2 {
   font-family: "Young Serif";
@@ -191,9 +225,15 @@ h2 {
 }
 
 h3 {
-  font-size: 1.35rem;
+  font-size: 1.3rem;
   font-weight: 600;
-  line-height: 1.35rem;
+  line-height: 1.3rem;
+}
+
+body, p, caption, th, td, li, li::marker {
+  font-family: "Outfit";
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 
 ul li,
@@ -207,67 +247,12 @@ ol li::marker {
   font-weight: 700;
 }
 
-ul, ol {
-  display: grid;
-  gap: 0.5rem;
+ul li::marker {
+  font-size: 0.75rem;
 }
 
-.root {
-  height: inherit;
-}
-
-.main {
-  height: inherit;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.recipe {
-  flex-basis: 45rem;
-  display: grid;
-  gap: 2rem;
-}
-
-.recipe-content {
-  padding: 2rem;
-  padding-top: 0;
-  display: grid;
-  gap: 2rem;
-}
-
-.recipe-intro {
-  display: grid;
-  gap: 1.5rem;
-}
-
-.recipe-preparation {
-  border-radius: 1rem;
-  padding: 1.5rem;
-  display: grid;
-  gap: 1rem;
-}
-
-.recipe-ingredients {
-  display: grid;
-  gap: 1rem;
-}
-
-.recipe-instructions {
-  display: grid;
-  gap: 1rem;
-}
-
-.recipe-nutrition {
-  display: grid;
-  gap: 1rem;
-}
-.recipe-nutrition .nutrition-value {
-  color: #854532;
+ol li::marker {
   font-weight: 700;
-}
-.recipe-nutrition tbody th, .recipe-nutrition tbody td {
-  padding: 0.8rem 2rem;
 }
 
 /*# sourceMappingURL=index.css.map */

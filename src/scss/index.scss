@@ -1,32 +1,79 @@
 @use 'hub';
 
-html {
-  height: 100%;
+ul, ol {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
-body {
-  height: inherit;
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-body,
-p,
-th,
-td,
-li,
-li::marker {
-  font-family: "Outfit";
-  font-size: hub.$font-size-rg;
-  line-height: hub.$font-size-rg * 1.5;
+.recipe {
+  flex-basis: 60rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  .recipe-content {
+    padding: 2rem;
+    padding-top: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    section {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .recipe-intro {
+      .recipe-preparation {
+        border-radius: 1rem;
+        padding: 1.5rem;
+        display: grid;
+        gap: 1rem; 
+      }
+    }
+
+    .recipe-nutrition {
+      table {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+    
+      tbody {
+        tr {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+
+          th, td {
+            padding: 0.7rem 0 0.7rem 0;
+          }
+
+          th {
+            padding-left: 2rem;
+          }
+          td {
+            padding-left: 0.5rem;
+          }
+        }
+      }
+    
+      .nutrition-value {
+        color: hub.$brown-800;
+        font-weight: hub.$font-weight-700
+      }
+    }
+  }
 }
 
-ul li::marker {
-  font-size: 0.75rem;
-}
-
-ol li::marker {
-  font-weight: hub.$font-weight-700;
-}
-
+/* Fonts and identations */
 h1,
 h2 {
   font-family: 'Young Serif';
@@ -40,13 +87,19 @@ h1 {
 
 h2 {
   font-size: hub.$font-size-xl;
-  line-height: hub.$font-size-xl * 1
+  line-height: hub.$font-size-xl * 1;
 }
 
 h3 {
   font-size: hub.$font-size-lg;
   font-weight: hub.$font-weight-600;
-  line-height: hub.$font-size-lg * 1
+  line-height: hub.$font-size-lg * 1;
+}
+
+body, p, caption, th, td, li, li::marker {
+  font-family: "Outfit";
+  font-size: hub.$font-size-rg;
+  line-height: hub.$font-size-rg * 1.5;
 }
 
 ul li,
@@ -60,70 +113,11 @@ ol li::marker {
   font-weight: hub.$font-weight-700;
 }
 
-ul, ol {
-  display: grid;
-  gap: 0.5rem;
+ul li::marker {
+  font-size: 0.75rem;
 }
 
-.root {
-  height: inherit;
+ol li::marker {
+  font-weight: hub.$font-weight-700;
 }
 
-.main {
-  height: inherit;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.recipe {
-  flex-basis: 45rem;
-  display: grid;
-  gap: 2rem;
-}
-
-.recipe-content {
-  padding: 2rem;
-  padding-top: 0;
-  display: grid;
-  gap: 2rem;
-}
-
-.recipe-intro {
-  display: grid;
-  gap: 1.5rem;
-}
-
-.recipe-preparation {
-  border-radius: 1rem;
-  padding: 1.5rem;
-  display: grid;
-  gap: 1rem;
-}
-
-.recipe-ingredients {
-  display: grid;
-  gap: 1rem;
-}
-
-.recipe-instructions {
-  display: grid;
-  gap: 1rem;
-}
-
-.recipe-nutrition {
-  display: grid;
-  gap: 1rem;
-
-  .nutrition-value {
-    color: hub.$brown-800;
-    font-weight: hub.$font-weight-700
-  }
-
-  tbody {
-    th, td {
-      padding: 0.8rem 2rem;
-    }
-  }
-}

@@ -7,11 +7,11 @@ function RecipeNutrition ({ calories, carbs, protein, fat }: RecipeProps['recipe
         Nutrition
       </h2>
 
-      <p>
-      The table below shows nutritional values per serving without the additional fillings.
-      </p>
-
       <table>
+        <caption>
+          The table below shows nutritional values per serving without the additional fillings.
+        </caption>
+
         <tbody>
           <tr>
             <th>
