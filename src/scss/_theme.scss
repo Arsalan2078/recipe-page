@@ -29,7 +29,7 @@
   }
 
   .separator {
-    border-top: 0.0125rem solid colors.$stone-150;
+    border-top: 0.0625rem solid colors.$stone-150;
   }
 
   .recipe-preparation {
@@ -42,7 +42,7 @@
 
   tbody {
     tr {
-      border-bottom: 0.0125rem solid colors.$stone-150;
+      border-bottom: 0.0625rem solid colors.$stone-150;
     }
   
     tr:nth-of-type(4) {

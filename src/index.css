@@ -108,7 +108,7 @@ meter {
   color: #854532;
 }
 .recipe .separator {
-  border-top: 0.0125rem solid #e3ddd7;
+  border-top: 0.0625rem solid #e3ddd7;
 }
 .recipe .recipe-preparation {
   background-color: #fff4f9;
@@ -117,7 +117,7 @@ meter {
   color: #7b274e;
 }
 .recipe tbody tr {
-  border-bottom: 0.0125rem solid #e3ddd7;
+  border-bottom: 0.0625rem solid #e3ddd7;
 }
 .recipe tbody tr:nth-of-type(4) {
   border-bottom: none;
@@ -161,7 +161,7 @@ ul, ol {
 }
 
 .recipe {
-  flex-basis: 60rem;
+  flex-basis: 45rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -253,6 +253,26 @@ ul li::marker {
 
 ol li::marker {
   font-weight: 700;
+}
+
+@media (min-width: 45rem) {
+  .recipe {
+    margin: 8rem 0;
+    border-radius: 1.5rem;
+    gap: 2.5rem;
+  }
+  .recipe .recipe-image {
+    margin: 2.5rem;
+    margin-bottom: 0;
+  }
+  .recipe .recipe-image img {
+    border-radius: 1rem;
+  }
+  .recipe .recipe-content {
+    padding: 2.5rem;
+    padding-top: 0;
+    gap: 2.5rem;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */
