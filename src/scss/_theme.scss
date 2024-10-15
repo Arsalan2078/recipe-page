@@ -35,7 +35,8 @@
   .recipe-preparation {
     background-color: colors.$rose-50;
 
-    h3 {
+    h3,
+    ul li::marker {
       color: colors.$rose-800;
     }
   }

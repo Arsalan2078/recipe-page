@@ -113,7 +113,8 @@ meter {
 .recipe .recipe-preparation {
   background-color: #fff4f9;
 }
-.recipe .recipe-preparation h3 {
+.recipe .recipe-preparation h3,
+.recipe .recipe-preparation ul li::marker {
   color: #7b274e;
 }
 .recipe tbody tr {

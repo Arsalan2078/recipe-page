@@ -1,0 +1,1 @@
+{"root":["./src/app.tsx","./src/main.tsx","./src/vite-env.d.ts","./src/components/recipeimage.tsx","./src/components/recipeingredients.tsx","./src/components/recipeinstructions.tsx","./src/components/recipeintro.tsx","./src/components/recipenutrition.tsx","./src/components/recipepreparation.tsx","./src/components/separator.tsx","./src/libs/types.ts"],"version":"5.6.3"}
