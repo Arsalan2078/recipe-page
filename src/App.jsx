@@ -1,117 +1,151 @@
+import H1 from "./components/H1";
+import H2 from "./components/H2";
+import H3 from "./components/H3";
+import Hr from "./components/Hr";
+import Li from "./components/Li";
+import Ol from "./components/Ol";
+import Td from "./components/Td";
+import Th from "./components/Th";
+import Ul from "./components/Ul";
+
 const App = () => {
   return (
-    <main>
-      <article>
-        <header>
-          <img src="./images/image-omelette.jpeg" alt="Image of an omelette" />
+    <main className="md:px-600 md:py-1600 bg-stone-100 md:flex md:h-full md:flex-col md:items-center md:justify-center">
+      <article className="font-outfit leading-150 md:w-recipe md:mx-300 md:rounded-300 md:py-500 md:px-500 gap-500 flex flex-col bg-white text-stone-600">
+        <img
+          src="./images/image-omelette.jpeg"
+          alt="Image of an omelette"
+          className="md:rounded-150 w-full"
+        />
 
-          <div>
-            <h1>Simple Omelette Recipe</h1>
+        <div className="gap-400 pb-500 px-400 flex flex-col md:p-0">
+          <header id="title" className="gap-300 flex flex-col">
+            <H1>Simple Omelette Recipe</H1>
 
             <p>
               An easy and quick dish, perfect for any meal. This classic
               omelette combines beaten eggs cooked to perfection, optionally
               filled with your choice of cheese, vegetables, or meats.
             </p>
-          </div>
+          </header>
 
-          <div>
-            <h3>Preparation time</h3>
-            <ul>
-              <li>
+          <section
+            id="preparation"
+            className="p-300 gap-200 rounded-150 flex flex-col bg-rose-50"
+          >
+            <H3>Preparation Time</H3>
+
+            <Ul className={`marker:text-rose-800`}>
+              <Li>
                 <b>Total</b>: Approximately 10 minutes
-              </li>
-              <li>
+              </Li>
+              <Li>
                 <b>Preparation</b>: 5 minutes
-              </li>
-              <li>
+              </Li>
+              <Li>
                 <b>Cooking</b>: 5 minutes
-              </li>
-            </ul>
-          </div>
-        </header>
+              </Li>
+            </Ul>
+          </section>
 
-        <section id="ingredients">
-          <h2>Ingredients</h2>
-          <ul>
-            <li>2-3 large eggs</li>
-            <li>Salt, to taste</li>
-            <li>Pepper, to taste</li>
-            <li>1 tablespoon of butter or oil</li>
-            <li>
-              Optional fillings: cheese, diced vegetables, cooked meats, herbs
-            </li>
-          </ul>
-        </section>
+          <section id="ingredients" className="gap-300 flex flex-col">
+            <H2>Ingredients</H2>
 
-        <hr />
+            <Ul className={`marker:text-brown-800`}>
+              <Li>2-3 large eggs</Li>
+              <Li>Salt, to taste</Li>
+              <Li>Pepper, to taste</Li>
+              <Li>1 tablespoon of butter or oil</Li>
+              <Li>
+                Optional fillings: cheese, diced vegetables, cooked meats, herbs
+              </Li>
+            </Ul>
+          </section>
 
-        <section id="instructions">
-          <h2>Instructions</h2>
+          <Hr />
 
-          <ol>
-            <li>
-              <b>Beat the eggs</b>: In a bowl, beat the eggs with a pinch of
-              salt and pepper until they are well mixed. You can add a
-              tablespoon of water or milk for a fluffier texture.
-            </li>
-            <li>
-              <b>Heat the pan</b>: Place a non-stick frying pan over medium heat
-              and add butter or oil.
-            </li>
-            <li>
-              <b>Cook the omelette</b>: Once the butter is melted and bubbling,
-              pour in the eggs. Tilt the pan to ensure the eggs evenly coat the
-              surface.
-            </li>
-            <li>
-              <b>Add fillings (optional)</b>: When the eggs begin to set at the
-              edges but are still slightly runny in the middle, sprinkle your
-              chosen fillings over one half of the omelette.
-            </li>
-            <li>
-              <b>Fold and serve</b>: As the omelette continues to cook,
-              carefully lift one edge and fold it over the fillings. Let it cook
-              for another minute, then slide it onto a plate.
-            </li>
-            <li>
-              <b>Enjoy</b>: Serve hot, with additional salt and pepper if
-              needed.
-            </li>
-          </ol>
-        </section>
+          <section id="instructions" className="gap-300 flex flex-col">
+            <H2>Instructions</H2>
 
-        <hr />
+            <Ol className="marker:text-brown-800 marker:font-bold">
+              <Li>
+                <b>Beat the eggs</b>: In a bowl, beat the eggs with a pinch of
+                salt and pepper until they are well mixed. You can add a
+                tablespoon of water or milk for a fluffier texture.
+              </Li>
+              <Li>
+                <b>Heat the pan</b>: Place a non-stick frying pan over medium
+                heat and add butter or oil.
+              </Li>
+              <Li>
+                <b>Cook the omelette</b>: Once the butter is melted and
+                bubbling, pour in the eggs. Tilt the pan to ensure the eggs
+                evenly coat the surface.
+              </Li>
+              <Li>
+                <b>Add fillings (optional)</b>: When the eggs begin to set at
+                the edges but are still slightly runny in the middle, sprinkle
+                your chosen fillings over one half of the omelette.
+              </Li>
+              <Li>
+                <b>Fold and serve</b>: As the omelette continues to cook,
+                carefully lift one edge and fold it over the fillings. Let it
+                cook for another minute, then slide it onto a plate.
+              </Li>
+              <Li>
+                <b>Enjoy</b>: Serve hot, with additional salt and pepper if
+                needed.
+              </Li>
+            </Ol>
+          </section>
 
-        <section id="nutrition">
-          <h2>Nutrition</h2>
+          <Hr />
 
-          <p>
-            The table below shows nutritional values per serving without the
-            additional fillings.
-          </p>
+          <section id="nutrition" className="gap-300 flex flex-col">
+            <H2>Nutrition</H2>
 
-          <table>
-            <tbody>
-              <tr>
-                <td>Calories</td>
-                <td>277kcal</td>
-              </tr>
-              <tr>
-                <td>Carbs</td>
-                <td>0g</td>
-              </tr>
-              <tr>
-                <td>Protein</td>
-                <td>20g</td>
-              </tr>
-              <tr>
-                <td>Fat</td>
-                <td>22g</td>
-              </tr>
-            </tbody>
-          </table>
-        </section>
+            <p>
+              The table below shows nutritional values per serving without the
+              additional fillings.
+            </p>
+
+            <table>
+              <tbody>
+                <tr>
+                  <Th>Calories</Th>
+                  <Td>277kcal</Td>
+                </tr>
+                <tr>
+                  <td colSpan={2}>
+                    <Hr />
+                  </td>
+                </tr>
+                <tr>
+                  <Th>Carbs</Th>
+                  <Td>0g</Td>
+                </tr>
+                <tr>
+                  <td colSpan={2}>
+                    <Hr />
+                  </td>
+                </tr>
+                <tr>
+                  <Th>Protein</Th>
+                  <Td>20g</Td>
+                </tr>
+                <tr>
+                  <td colSpan={2}>
+                    <Hr />
+                  </td>
+                </tr>
+                <tr>
+                  <Th>Fat</Th>
+                  <Td>22g</Td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+        </div>
       </article>
     </main>
   );
